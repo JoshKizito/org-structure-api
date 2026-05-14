@@ -1,16 +1,16 @@
-# Org Structure — Projet complet
+# Org Structure — Полный проект
 
 ```
 org-complete/
-├── org-api/        → API REST FastAPI + PostgreSQL
-└── org-frontend/   → Dashboard React (Vite, dark mode)
+├── org-api/        → REST API FastAPI + PostgreSQL
+└── org-frontend/   → Dashboard React (Vite, тёмная тема)
 ```
 
 ---
 
-## Démarrage rapide
+## Быстрый старт
 
-### 1. Backend (API + base de données)
+### 1. Бэкенд (API + база данных)
 
 ```bash
 cd org-api
@@ -18,10 +18,10 @@ cp .env.example .env
 docker-compose up --build
 ```
 
-API disponible sur : http://localhost:8000  
-Documentation Swagger : http://localhost:8000/docs
+API доступен по адресу : http://localhost:8000  
+Документация Swagger : http://localhost:8000/docs
 
-### 2. Frontend (dans un autre terminal)
+### 2. Фронтенд (в другом терминале)
 
 ```bash
 cd org-frontend
@@ -29,32 +29,32 @@ npm install
 npm run dev
 ```
 
-Dashboard disponible sur : http://localhost:3000
+Dashboard доступен по адресу : http://localhost:3000
 
 ---
 
-## Architecture
+## Архитектура
 
 ```
 org-api/
 ├── Dockerfile + docker-compose.yml
-├── alembic/         migrations SQL
+├── alembic/         SQL-миграции
 └── app/
-    ├── api/         routes FastAPI
-    ├── core/        config, database
+    ├── api/         маршруты FastAPI
+    ├── core/        конфигурация, база данных
     ├── models/      SQLAlchemy ORM
     ├── schemas/     Pydantic v2
-    ├── services/    logique métier
-    └── repositories/ accès base de données
+    ├── services/    бизнес-логика
+    └── repositories/ доступ к базе данных
 
 org-frontend/
 └── src/
-    ├── api/         client HTTP
-    ├── components/  Sidebar, DeptDetail, modals
+    ├── api/         HTTP-клиент
+    ├── components/  Sidebar, DeptDetail, модальные окна
     └── hooks/       useToast
 ```
 
-## Tests backend
+## Тесты бэкенда
 
 ```bash
 cd org-api

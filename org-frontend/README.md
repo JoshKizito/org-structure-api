@@ -1,14 +1,14 @@
 # OrgChart Frontend
 
-Dashboard React (Vite) pour l'API organisationnelle.
+Dashboard React (Vite) для организационного API.
 
-## Stack
+## Стек технологий
 - React 18 + Vite 5
-- CSS Modules (dark mode, design tokens)
-- Lucide React (icônes)
+- CSS Modules (тёмная тема, дизайн-токены)
+- Lucide React (иконки)
 - IBM Plex Mono + DM Sans
 
-## Lancement
+## Запуск
 
 ```bash
 cd org-frontend
@@ -16,22 +16,22 @@ npm install
 npm run dev       # http://localhost:3000
 ```
 
-> L'API doit tourner sur `http://localhost:8000`  
-> Le proxy Vite redirige automatiquement `/api` → `http://localhost:8000`
+> API должен быть запущен на `http://localhost:8000`  
+> Прокси Vite автоматически перенаправляет `/api` → `http://localhost:8000`
 
-## Build production
+## Продакшн-сборка
 
 ```bash
-npm run build     # génère dist/
-npm run preview   # prévisualise le build
+npm run build     # генерирует dist/
+npm run preview   # предпросмотр сборки
 ```
 
-## Fonctionnalités
+## Функциональность
 
-- Arbre des départements dans la sidebar (récursif, recherche)
-- Détail d'un département : stats, sous-départements, liste d'employés
-- Créer / modifier / supprimer un département
-- Ajouter des employés
-- Suppression en cascade ou avec réaffectation des employés
-- Toasts de feedback
-- Rafraîchissement manuel
+- Дерево отделов в боковой панели (рекурсивное, с поиском)
+- Детали отдела : статистика, подотделы, список сотрудников
+- Создание / редактирование / удаление отдела
+- Добавление сотрудников
+- Каскадное удаление или с переназначением сотрудников
+- Уведомления (toasts)
+- Ручное обновление
